@@ -1,21 +1,24 @@
+var path = require('path');
+var webpack = require('webpack');
+
 module.exports = {
-  entry: './main.js'
+  entry: './main.js',
   output: {
-    path: './',
+    path: __dirname,
     filename: 'index.js'
   },
-  devServer:: {
+  devServer: {
     inline: true,
     port: 1111
   },
   module:{
-    loaders: [
+    loaders: [{
       test: /\.js$/,
       exclude: /node_modules/,
-      loader: 'babel',
-      // query: {
-      //   presets: ['es2015', 'react']
-      // }
-    ]
+      loader: 'babel-loader',
+      query: {
+        presets: ['es2015', 'react']
+      }
+    }]
   }
 }

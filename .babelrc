@@ -1,3 +1,0 @@
-{
-  "presets" : ["babel-2015", "react", "stage-0"]
-}
